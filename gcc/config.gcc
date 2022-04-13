@@ -920,6 +920,12 @@ case ${target} in
   d_target_objs="${d_target_objs} openbsd-d.o"
   target_has_targetdm=yes
   ;;
+*-*-mykonos*)
+  gas=yes
+  gnu_ld=yes
+  default_use_cxa_atexit=yes
+  use_gcc_stdint=wrap
+  ;;
 *-*-phoenix*)
   gas=yes
   gnu_ld=yes
@@ -2003,6 +2009,9 @@ i[34567]86-*-linux* | i[34567]86-*-kfreebsd*-gnu | i[34567]86-*-gnu* | i[34567]8
 		tm_file="$tm_file i386/gnu-user-common.h i386/gnu-user.h gnu.h i386/gnu.h"
 		;;
 	esac
+	;;
+x86_64-*-mykonos*)
+	tm_file="${tm_file} i386/unix.h i386/att.h dbxelf.h elfos.h glibc-stdint.h i386/i386elf.h i386/x86-64.h mykonos.h"
 	;;
 x86_64-*-linux* | x86_64-*-kfreebsd*-gnu)
 	tm_file="${tm_file} i386/unix.h i386/att.h dbxelf.h elfos.h gnu-user.h glibc-stdint.h \

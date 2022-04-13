@@ -27,9 +27,8 @@ This version of gcc is suitable for compiling mykonos.
 The best way to compile this project is probably like this: (from the directory above the root directory of the repo)
 1. Mkdir mykonos-gcc-build
 cd mykonos-gcc-build
-../mykonos-gcc/configure --target=x86_64-elf --disable-nls --enable-languages=c,c++ --without-headers --prefix=$PREFIX
+../mykonos-gcc/configure --target=x86_64-mykonos --disable-nls --enable-languages=c,c++ --without-headers --prefix=$PREFIX
 make all-gcc
 make all-target-libgcc
 make install-gcc
 make install-target-libgcc
-(replacing x86_64 with the target architecture, and $PREFIX with the directory to install gcc into, such as $HOME/opt/x86_64-elf)   
