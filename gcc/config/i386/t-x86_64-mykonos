@@ -1,0 +1,4 @@
+# Add libgcc multilib variant for the kernel
+
+MULTILIB_OPTIONS += mno-red-zone mcmodel=large
+MULTILIB_DIRNAMES += no-red-zone cmodel=large
