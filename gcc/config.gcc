@@ -924,7 +924,7 @@ case ${target} in
   gas=yes
   gnu_ld=yes
   default_use_cxa_atexit=yes
-  use_gcc_stdint=wrap
+  use_gcc_stdint=provide
   ;;
 *-*-phoenix*)
   gas=yes
